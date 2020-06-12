@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: center;
+    padding: 10px;
+}
+
+.block {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #777788;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+    transition: ease-in-out .5s;
+}
+
+.block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+body {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(100, 100, 100, 0.4)
+}
+
+.modal {
+    width: 375px;
+    margin: 15% auto auto;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #777788;
+    border-radius: 8px;
+    padding: 30px 20px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.avatar {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+h3 {
+    padding-left: 80px;
+    padding-top: 20px;
+    cursor: pointer;
+    transition: ease-in-out .5s;
+}
+
+h3:hover {
+    opacity: 0.5;
+}
+
+h3, h2, h1, p {
+    font-family: 'Abhaya Libre', serif;
+}
+
+p {
+    color: grey;
+}
