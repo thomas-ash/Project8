@@ -16,6 +16,7 @@ fetch(url)
     .then(displayEmployees)
     .catch(err => console.log(err))
 
+// FUNCTIONS -------------------------------
 function displayEmployees(employeeData) {
     employees = employeeData;
 
@@ -43,11 +44,11 @@ function displayEmployees(employeeData) {
 }
 
 function displayModal(index) {
-   let { name, dob, phone, email, location: { city, street, state, postcode
-}, picture } = employees[index];
+   let { name, dob, phone, email, location: { city, street, state, postcode } , picture } = employees[index];
     let date = new Date(dob.date);
+
     const modalHTML = `
-    <img class="avatar" src="${picture}" />
+    <img class="avatar" src="${picture.large}" />
     <div class="text-container">
         <h2 class="name">${name.first} ${name.last}</h2>
         <p class="email">${email}</p>
@@ -61,13 +62,14 @@ function displayModal(index) {
         modalContent.innerHTML = modalHTML;
 }
 
+// EVENT LISTENERS -------------------------------
 container.addEventListener('click', e => {
     
     if (e.target !== container) {
-    
-    clicked
+     
     const block = e.target.closest(".block");
     const index = block.getAttribute('data-index');
+    
     displayModal(index);
     }
 });
